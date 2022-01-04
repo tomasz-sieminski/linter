@@ -40,11 +40,9 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   lint:
-    
     runs-on: ubuntu-latest
     steps:
-      - name: Super-Linter
-        uses: github/super-linter@latest
+      - name: Run java checkstyle
+        uses: nikitasavinov/checkstyle-action@0.4.0
         env:
           GITHUB_TOKEN: $({ secrets.GITHUB_TOKEN })
-          VALIDATE_JAVA: true
