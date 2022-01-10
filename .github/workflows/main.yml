@@ -26,3 +26,6 @@ jobs:
         uses: github/super-linter@v4.8.5
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VALIDATION_JAVA: TRUE
+          OUTPUT_DETAILS: detailed
+          VALIDATE_ALL_CODEBASE: false
