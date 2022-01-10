@@ -21,7 +21,7 @@ jobs:
       #- name: Run Google Code Analysis Here
       #  run: java com.puppycrawl.tools.checkstyle.Main -c docs/google_checks.xml src/
       - uses: actions/checkout@v2
-      - uses: dbelyaev/action-checkstyle@v0.1.1
+      - uses: dbelyaev/action-checkstyle@v0.5.1
         with:
           checkstyle_config: checkstyle.xml
           github_token: ${{ secrets.github_token }}
