@@ -1,31 +1,13 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-on: [push, pull_request]
-
+name: reviewdog
+on: [pull_request, push]
 jobs:
-  build:
+  checkstyle:
+    name: runner / checkstyle
     runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v2
-    
-    - name: Setup Java
-      uses: actions/setup-java@v2.5.0
-      with:
-        distribution: 'adopt'
-        java-version: '11'
-  lint:
-    runs-on: ubuntu-latest
-    
     steps:
       - uses: actions/checkout@v2
-      
-      - name: Linter
-        uses: nikitasavinov/checkstyle-action@0.4.0
+      - uses: dbelyaev/action-checkstyle@v0.5.1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: 'github-pr-review'
-          tool_name: 'Linter'
-          fail_on_error: TRUE
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: warning
