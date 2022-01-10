@@ -3,8 +3,14 @@
 name: CheckStyle
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the main branch
-on: [ pull_request, push]
+on: 
 
+  pull_request:
+    branches: 
+      - "!hotfix/**"
+  push:
+    branches:
+      - "!hotfix/**"
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -18,8 +24,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11        
-      #- name: Run Google Code Analysis Here
-      #  run: java com.puppycrawl.tools.checkstyle.Main -c docs/google_checks.xml src/
       - uses: actions/checkout@v2
       - uses: dbelyaev/action-checkstyle@v0.5.1
         with:
@@ -29,5 +33,4 @@ jobs:
           reporter: github-pr-review
           # Change reporter level if you need [info,warning,error].
           # GitHub Status Check won't become failure with a warning.
-          level: warning
-          #workdir: src/main
+          level: error
