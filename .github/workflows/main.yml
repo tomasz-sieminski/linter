@@ -12,8 +12,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Run check style
-      uses: nikitasavinov/checkstyle-action@master
-      with:
+      uses: github/super-linter@v4
+      env:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        reporter: 'github-pr-check'
-        tool_name: 'testtool'
+        VALIDATE_JAVA: TRUE
