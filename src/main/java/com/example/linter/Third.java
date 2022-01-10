@@ -7,4 +7,5 @@ public class Third {
     private String ajhsdjahs = "test";
     private String habababa = "test";
     private String asdasdada = "test";
+    private String test = "test";
 }
