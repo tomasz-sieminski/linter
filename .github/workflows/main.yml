@@ -26,6 +26,6 @@ jobs:
         uses: nikitasavinov/checkstyle-action@0.4.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: 'github-pr-check'
+          reporter: 'github-pr-review'
           tool_name: 'Linter'
           fail_on_error: TRUE
