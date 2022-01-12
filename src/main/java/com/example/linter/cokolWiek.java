@@ -3,8 +3,11 @@ package com.example.linter;
 import org.*;
 
 public class cokolWiek
-{ private final String TESt123="test";
-private String lineThatIsTooLongShouldBeMarkedAsSuch="this line should be too long and marked as such in pr review";
+{
+    private final String test="test";
+    private String lineThatShouldBeFine="this";
 
-cokolWiek(){for(int i=0;i<100;i++);}
+    cokolWiek(){
+
+    }
 }
