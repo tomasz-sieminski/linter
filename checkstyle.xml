@@ -16,7 +16,7 @@
 <module name = "Checker">
   <property name="charset" value="UTF-8"/>
 
-  <property name="severity" value="warning"/>
+  <property name="severity" value="error"/>
 
   <property name="fileExtensions" value="java, properties, xml"/>
   <!-- Excludes all 'module-info.java' files              -->
@@ -39,7 +39,7 @@
 
   <module name="LineLength">
     <property name="fileExtensions" value="java"/>
-    <property name="max" value="100"/>
+    <property name="max" value="40"/>
     <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
   </module>
 
@@ -111,7 +111,7 @@
       <property name="allowEmptyLambdas" value="true"/>
       <property name="allowEmptyMethods" value="true"/>
       <property name="allowEmptyTypes" value="true"/>
-      <property name="allowEmptyLoops" value="true"/>
+      <property name="allowEmptyLoops" value="false"/>
       <property name="ignoreEnhancedForColon" value="false"/>
       <property name="tokens"
                value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR,
