@@ -1,4 +1,5 @@
 package com.example.linter;
 
-public class TestClass {
-}
+import org.springframework.boot.autoconfigure.*;
+
+public class TestClass{}
