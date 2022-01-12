@@ -1,1 +1,2 @@
-package com.example.linter;public class Third {}
+package com.example.linter;
+            public class Third {}
